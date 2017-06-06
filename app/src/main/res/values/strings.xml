@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MDrone1</string>
+    <string name="have_a_drone">Have a Drone</string>
+    <string name="need_a_drone">Need a drone</string>
+    <string name="welcome_to_mdrone">welcome to MDrone</string>
 </resources>
