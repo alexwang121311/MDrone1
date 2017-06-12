@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -15,31 +14,26 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        //welcome message.
-        final TextView welcome = (TextView) findViewById(R.id.tvWelcome);
-        //login buttons
-        final Button btnUserLogin = (Button) findViewById(R.id.btnUserLogin);
-        final Button btnPilotLogin = (Button) findViewById(R.id.btnPilotLogin);
+        //login and register buttons
+        final Button btnGoToUser = (Button) findViewById(R.id.btnGoToUser);
+        final Button btnGoToPilot = (Button) findViewById(R.id.btnGoToPilot);
 
-        //go to UserLogin
-        btnUserLogin.setOnClickListener(new View.OnClickListener() {
+        //go to register activity on button click
+        btnGoToUser.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View V)
-            {
+            public void onClick(View V) {
                 Intent registerIntent = new Intent(StartActivity.this, UserLogin.class);
                 StartActivity.this.startActivity(registerIntent);
             }
         });
 
-        //go to PilotLogin
-        btnPilotLogin.setOnClickListener(new View.OnClickListener() {
+        btnGoToPilot.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View V)
+            public void onClick(View v)
             {
-                Intent registerIntent = new Intent(StartActivity.this, PilotLogin.class);
-                StartActivity.this.startActivity(registerIntent);
+                Intent goToPilot = new Intent(StartActivity.this, PilotLogin.class);
+                StartActivity.this.startActivity(goToPilot);
             }
         });
     }
 }
-
